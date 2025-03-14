@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../assets/cat.jpeg";
 
 function About() {
   const [activeSection, setActiveSection] = useState("skills");
 
-  const handleSectionClick = (section) => {
+  // Create refs for each section
+  const educationRef = useRef(null);
+  const skillsRef = useRef(null);
+  const careerRef = useRef(null);
+
+  // Track which section is being clicked
+  const [clickedSection, setClickedSection] = useState(null);
+
+  useEffect(() => {
+    // Scroll into view only when a section is clicked
+    if (clickedSection) {
+      clickedSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [clickedSection]);
+
+  const handleSectionClick = (section, ref) => {
     setActiveSection(activeSection === section ? "" : section);
+    setClickedSection(ref.current);  // Set the clicked section to trigger scroll
   };
 
   return (
@@ -44,19 +60,19 @@ function About() {
           {/* Sections Links */}
           <div className="sections-links mb-8 text-center">
             <button
-              onClick={() => handleSectionClick("education")}
+              onClick={() => handleSectionClick("education", educationRef)}
               className={`text-lg font-semibold mb-4 ${activeSection === "education" ? "text-sky-500" : "text-white"} hover:text-sky-500 transition duration-300`}
             >
               Education
             </button>
             <button
-              onClick={() => handleSectionClick("skills")}
+              onClick={() => handleSectionClick("skills", skillsRef)}
               className={`text-lg font-semibold mb-4 mx-6 ${activeSection === "skills" ? "text-sky-500" : "text-white"} hover:text-sky-500 transition duration-300`}
             >
               Skills & Expertise
             </button>
             <button
-              onClick={() => handleSectionClick("career")}
+              onClick={() => handleSectionClick("career", careerRef)}
               className={`text-lg font-semibold mb-4 ${activeSection === "career" ? "text-sky-500" : "text-white"} hover:text-sky-500 transition duration-300`}
             >
               Career Goals
@@ -70,6 +86,7 @@ function About() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
+              ref={educationRef}  
             >
               <h3 className="text-2xl font-semibold text-white">Education</h3>
               <p className="text-lg text-white">
@@ -85,6 +102,7 @@ function About() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
+              ref={skillsRef}  
             >
               <h3 className="text-2xl font-semibold text-white">Skills & Expertise</h3>
               <ul className="list-disc pl-6 space-y-2 text-white">
@@ -104,6 +122,7 @@ function About() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
+              ref={careerRef}  
             >
               <h2 className="text-3xl font-semibold text-center mb-6 text-sky-400">Career Goal</h2>
               <motion.p

@@ -5,12 +5,12 @@ import profileImage from "../assets/cat.jpeg";
 function Home() {
   return (
     <motion.section
-      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8"
+      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8 mt-16" // Add mt-16 to create space from the navbar
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="home-container flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-12">
+      <div className="home-container flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-12 flex-wrap"> {/* Add flex-wrap */}
         <motion.img
           src={profileImage}
           alt="Ivy Wanjiru Mugo"
