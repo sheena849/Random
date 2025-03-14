@@ -5,20 +5,23 @@ import profileImage from "../assets/cat.jpeg";
 function Home() {
   return (
     <motion.section
-      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8 mt-16" // Add mt-16 to create space from the navbar
+      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8 mt-16" // Added mt-16 for space from navbar
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="home-container flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-12 flex-wrap"> {/* Add flex-wrap */}
+      <div className="home-container flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-12 flex-wrap">
+        {/* Profile Image */}
         <motion.img
           src={profileImage}
           alt="Ivy Wanjiru Mugo"
-          className="profile-image w-52 h-52 md:w-72 md:h-72 rounded-full shadow-lg object-cover border-4 border-sky-400 glow-effect"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          className="profile-image w-52 h-52 md:w-72 md:h-72 rounded-full shadow-lg object-cover border-4 border-sky-400 glow-effect mb-8 md:mb-0" // Added margin for mobile
+          initial={{ y: -100, opacity: 0 }} // Adjusting for better entry animation
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         />
+        
+        {/* Text Section */}
         <motion.div
           className="home-text text-center md:text-left text-white"
           initial={{ x: 100, opacity: 0 }}
@@ -35,7 +38,7 @@ function Home() {
               animate={{ width: "auto" }}
               transition={{
                 duration: 3,
-                ease: "easeInOut", // Fixed easing type
+                ease: "easeInOut",
                 repeat: 0,
                 repeatType: "loop",
                 delay: 0.5,
