@@ -5,7 +5,7 @@ import profileImage from "../assets/cat.jpeg";
 function Home() {
   return (
     <motion.section
-      className="home bg-gray-800 min-h-screen flex items-center justify-center py-16 mt-16" // Increased py-16 for more top padding
+      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8 mt-16" // Keep the mt-16 for space from navbar
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -15,7 +15,7 @@ function Home() {
         <motion.img
           src={profileImage}
           alt="Ivy Wanjiru Mugo"
-          className="profile-image w-52 h-52 md:w-72 md:h-72 rounded-full shadow-lg object-cover border-4 border-sky-400 glow-effect mb-8 md:mb-0"
+          className="profile-image w-52 h-52 md:w-72 md:h-72 rounded-full shadow-lg object-cover border-4 border-sky-400 glow-effect mb-8 md:mb-0 mt-20 sm:mt-32" // Adjusted margin-top for better spacing
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
