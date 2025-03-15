@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -13,15 +13,10 @@ function Footer() {
         </p>
         {/* Social Media Links */}
         <div className="social-links space-x-6 mb-4">
-          <a href="https://www.linkedin.com/in/ivywanjirumugo" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+          <a href="https://www.linkedin.com/in/ivy-mugo-a33b132a1/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
             <FaLinkedin className="text-2xl inline-block" />
           </a>
-          <a href="https://github.com/ivywanjirumugo" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
-            <FaGithub className="text-2xl inline-block" />
-          </a>
-          <a href="https://twitter.com/ivywanjirumugo" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
-            <FaTwitter className="text-2xl inline-block" />
-          </a>
+          
         </div>
       </div>
     </footer>

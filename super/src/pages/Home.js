@@ -5,7 +5,7 @@ import profileImage from "../assets/cat.jpeg";
 function Home() {
   return (
     <motion.section
-      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8 mt-16" // Keep the mt-16 for space from navbar
+      className="home bg-gray-800 min-h-screen flex items-center justify-center py-8 mt-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -15,12 +15,12 @@ function Home() {
         <motion.img
           src={profileImage}
           alt="Ivy Wanjiru Mugo"
-          className="profile-image w-52 h-52 md:w-72 md:h-72 rounded-full shadow-lg object-cover border-4 border-sky-400 glow-effect mb-8 md:mb-0 mt-20 sm:mt-32" // Adjusted margin-top for better spacing
+          className="profile-image w-52 h-52 md:w-72 md:h-72 rounded-full shadow-lg object-cover border-4 border-sky-400 glow-effect mb-8 md:mb-0 mt-20 sm:mt-32"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         />
-        
+
         {/* Text Section */}
         <motion.div
           className="home-text text-center md:text-left text-white"
@@ -72,17 +72,22 @@ function Home() {
               </motion.span>
             </motion.span>
           </h1>
+
           <motion.p className="home-description text-lg mb-6 max-w-lg mx-auto md:mx-0">
             A detail-oriented and passionate Accountant dedicated to financial excellence. With experience in{" "}
             <em>financial reporting, budgeting, and compliance</em>, I help businesses maintain accuracy and efficiency in their accounting practices.
           </motion.p>
+
+          {/* Click to View CV Button */}
           <motion.a
-            href="#"
-            className="download-btn inline-block px-6 py-3 text-white bg-sky-400 hover:bg-sky-500 rounded-lg shadow-md transition duration-300"
+            href="/IVY MUGO CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="view-cv-btn inline-block px-6 py-3 text-white bg-sky-400 hover:bg-sky-500 rounded-lg shadow-md transition duration-300"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Download CV
+            Click to View CV
           </motion.a>
         </motion.div>
       </div>

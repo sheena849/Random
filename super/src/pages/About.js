@@ -90,7 +90,10 @@ function About() {
             >
               <h3 className="text-2xl font-semibold text-white">Education</h3>
               <p className="text-lg text-white">
-                Bachelor's Degree in Accounting – <strong>University Name</strong>
+                Bachelor's Degree in Insuarance – <strong>Technical University Of Kenya </strong>
+              </p>
+              <p className="text-lg text-white">
+                Certified Public Accountant– <strong>Royal Business School </strong>
               </p>
             </motion.div>
           )}
@@ -107,10 +110,10 @@ function About() {
               <h3 className="text-2xl font-semibold text-white">Skills & Expertise</h3>
               <ul className="list-disc pl-6 space-y-2 text-white">
                 <li>Financial Reporting & Analysis</li>
-                <li>Budgeting & Forecasting</li>
+                
                 <li>Tax Preparation & Compliance</li>
                 <li>Accounts Payable & Receivable</li>
-                <li>Accounting Software (e.g., QuickBooks, Xero)</li>
+                <li>Accounting Software </li>
               </ul>
             </motion.div>
           )}

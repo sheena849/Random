@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function Experience() {
   return (
     <motion.section 
-      className="experience py-12 px-6 bg-gray-800 text-white pt-32"  // Removed mt-24
+      className="experience py-12 px-6 bg-gray-800 text-white pt-32"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -18,36 +18,42 @@ function Experience() {
           
           {/* Primary Education */}
           <div className="education-item space-y-4">
-            <h3 className="text-xl font-semibold text-white">Primary Education:</h3>
-            <p className="text-lg text-white">
-              Lizar Academy (2000-2006),St. Mary's (2007-2012)
-            </p>
+            <h3 className="text-xl font-bold uppercase underline text-white">Primary Education</h3>
+            <p className="text-lg text-white">Lizar Academy (2000-2006)</p>
+            <p className="text-lg text-white mt-6">St. Mary's (2007-2012)</p> {/* Added mt-6 for spacing */}
           </div>
 
           {/* High School */}
-          <div className="education-item space-y-4">
-            <h3 className="text-xl font-semibold text-white">High School:</h3>
+          <div className="education-item space-y-4 mt-8"> {/* Increased spacing */}
+            <h3 className="text-xl font-bold uppercase underline text-white">High School</h3>
             <p className="text-lg text-white">
-              St. Claire Elbughorn (2013-2016)
+              St. Clare Elburgon - Kenya Certificate of Secondary Education (2013-2016)
             </p>
           </div>
 
           {/* University */}
-          <div className="education-item space-y-4">
-            <h3 className="text-xl font-semibold text-white">University:</h3>
+          <div className="education-item space-y-4 mt-8"> {/* Increased spacing */}
+            <h3 className="text-xl font-bold uppercase underline text-white">University</h3>
             <p className="text-lg text-white">
-              Technical University of Kenya - Bachelor's Degree in Accounting (2017-2022)
+              Technical University of Kenya - Bachelor of Commerce, Insurance (2017-2022)
             </p>
           </div>
 
-          {/* CV Link */}
-          
+          {/* Professional Certification */}
+          <div className="education-item space-y-4 mt-8"> {/* Increased spacing */}
+            <h3 className="text-xl font-bold uppercase underline text-white">Professional Certification</h3>
+            <p className="text-lg text-white">
+              Royal Business School - Certified Public Accountant Part I and II (2023 to date)
+            </p>
+            <p className="text-lg text-white mt-6">Google Data Analytics Professional Certificate (March 2025 to date)</p> {/* Added mt-6 for spacing */}
+          </div>
         </div>
 
         {/* Right side: Professional Experience */}
         <div className="experience w-full lg:w-1/2 pl-0 lg:pl-8"> 
           <h2 className="text-3xl font-semibold text-center mb-6 text-sky-400">Professional Experience</h2>
-          <div className="experience-container space-y-6"> {/* Added space between items */}
+          <div className="experience-container space-y-6"> 
+            
             {/* Experience item 1 */}
             <motion.div 
               className="experience-item bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
