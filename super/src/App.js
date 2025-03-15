@@ -6,11 +6,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";  // Import ScrollToTop
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Ensures page scrolls to top on route change */}
       <div className="app-container">
         <Navbar />
         <Routes>
